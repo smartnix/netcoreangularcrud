@@ -1,0 +1,50 @@
+<form #form="ngForm" autocomplete="off">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+       <input  name="CardOwnerName" #CardOwnerName="ngModel" [(ngModel)]="service.formData.CardOwnerName" class="form-control" placeholder="Card owner name">
+        </div>
+    </div>
+    <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                </div>
+           <input  name="CardNumber" #CardNumber="ngModel" [(ngModel)]="service.formData.CardNumber" class="form-control" placeholder="Card number">
+            </div>
+        </div>
+        <div class="row">
+    <div class="form-group col-7">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </div>
+            <input  name="ExpirationDate" #ExpirationDate="ngModel" [(ngModel)]="service.formData.ExpirationDate" class="form-control" placeholder="MM/YY">
+            </div>
+        </div>
+        <div class="form-group col-5">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text bg-white">
+                            <i class="fas fa-key"></i>
+                        </div>
+                    </div>
+                <input type="password" name="CVV" #CVV="ngModel" [(ngModel)]="service.formData.CVV" class="form-control" placeholder="CVV">
+                </div>
+            </div>
+        </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-lg" type="submit">
+                 <i class="fas fa-database"></i>
+                    Enviar
+                </button>
+            </div>
+</form>
